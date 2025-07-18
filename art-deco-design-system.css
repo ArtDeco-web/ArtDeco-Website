@@ -246,6 +246,9 @@ h1, h2, h3, h4, h5, h6 {
   margin: 1rem;
   position: relative;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .art-deco-card::before {
@@ -262,6 +265,16 @@ h1, h2, h3, h4, h5, h6 {
 .art-deco-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-dark);
+}
+
+/* Grid container for equal height cards */
+.section div[style*="display: grid"] {
+  align-items: stretch;
+}
+
+/* Ensure card content distribution */
+.art-deco-card p {
+  flex-grow: 1;
 }
 
 /* Layout Styles */
